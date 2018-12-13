@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 临时的顺序节点
+ * 临时的顺序节点 (可以用来实现分布式锁)
  * 基本特性与临时节点一致，创建节点的过程中，Zookeeper会在其名字后自动追加一个单调增长的数字后缀，作为新的节点名。回话失效后自动清除。
  */
 public class EphemeralSequentialNodeTest {
