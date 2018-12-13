@@ -10,6 +10,7 @@ import java.util.List;
 
 /**
  * 分布式锁
+ * https://blog.csdn.net/u012152619/article/details/53053634
  */
 public class ZkDistributedLock {
 
@@ -55,7 +56,7 @@ public class ZkDistributedLock {
     }
 
     public static void setZkClient(CountPlus thread) throws Exception {
-        ZooKeeper zkClient = new ZooKeeper("127.0.0.1:2181", 3000, null);
+        ZooKeeper zkClient = new ZooKeeper(Const.IP_ADDRESS, 3000, null);
         thread.setZkClient(zkClient);
     }
 
